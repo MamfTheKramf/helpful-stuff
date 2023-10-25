@@ -1,0 +1,20 @@
+{
+    "appenders": {
+        "out": {
+            "type": "stdout"
+        },
+        "everything": {
+            "type": "file",
+            "filename": "logs/graphql.log",
+            "maxLogSize": "512K"
+        }
+    },
+    "categories": {
+        "default": {
+            "appenders": [
+                "everything"
+            ],
+            "level": "debug"
+        }
+    }
+}

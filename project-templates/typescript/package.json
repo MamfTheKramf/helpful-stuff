@@ -1,0 +1,26 @@
+{
+  "name": "",
+  "version": "0.0.0",
+  "description": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "esbuild src/index.ts --bundle --minify --sourcemap --outfile=dist/index.js"
+  },
+  "author": "",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "@types/node": "^20.8.7",
+    "@typescript-eslint/eslint-plugin": "^6.8.0",
+    "@typescript-eslint/parser": "^6.8.0",
+    "esbuild": "^0.19.5",
+    "eslint": "^8.51.0",
+    "eslint-plugin-import": "^2.28.1",
+    "eslint-plugin-jsdoc": "^46.8.2",
+    "eslint-plugin-prefer-arrow": "^1.2.3",
+    "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "log4js": "^6.9.1",
+    "ts-command-line-args": "^2.5.1"
+  }
+}
