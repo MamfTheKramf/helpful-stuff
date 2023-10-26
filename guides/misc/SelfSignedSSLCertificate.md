@@ -4,4 +4,4 @@
 openssl req -newkey rsa:4069 -nodes -keyout key.pem -x509 -days 3650 -out certificate.pem -subj "/CN=<IP-Address>"
 ```
 
-Replace <IP-Address> for the address for which you want the certificate
+Replace `<IP-Address>` for the address for which you want the certificate
