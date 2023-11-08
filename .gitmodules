@@ -1,0 +1,3 @@
+[submodule "project-templates/nextjs-template"]
+	path = project-templates/nextjs-template
+	url = git@github.com:freehour/nextjs-template.git
