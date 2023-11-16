@@ -2,3 +2,8 @@
 	path = project-templates/nextjs-template
 	url = https://github.com/freehour/nextjs-template.git
 	branch = main
+
+[submodule "project-templates/bun-template"]
+	path = project-templates/bun-template
+	url = https://github.com/pfui-bah-kiste/bunny.git
+	branch = main
