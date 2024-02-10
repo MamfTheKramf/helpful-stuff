@@ -7,3 +7,6 @@
 	path = project-templates/bun-template
 	url = https://github.com/pfui-bah-kiste/bunny.git
 	branch = main
+[submodule "project-templates/vite-starter"]
+	path = project-templates/vite-starter
+	url = https://github.com/freehour/vite-starter.git
