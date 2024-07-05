@@ -12,3 +12,6 @@
 	path = project-templates/vite-starter
 	url = https://github.com/freehour/vite-starter.git
 	branch = main
+[submodule "configs/nvim"]
+	path = configs/nvim
+	url = git@github.com:MamfTheKramf/kickstart.nvim.git
