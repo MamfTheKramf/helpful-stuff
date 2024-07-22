@@ -1,7 +1,7 @@
 # Make self signed certificates
 
 ```Bash
-openssl req -newkey rsa:4069 -nodes -x509 -days 365 -subj "/CN=<IP-Address>" -keyout key.pem -out certificate.pem
+openssl req -newkey rsa:4069 -nodes -x509 -days 365 -subj "/CN=<IP-Address>" -keyout key.pem -out cert.pem
 ```
 
 Replace `<IP-Address>` for the address for which you want the certificate
