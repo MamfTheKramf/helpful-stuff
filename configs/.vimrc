@@ -1,5 +1,6 @@
 :colorscheme industry
 
+:set nowrap
 :set rnu
 :set nu
 
