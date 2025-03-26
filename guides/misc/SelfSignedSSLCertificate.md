@@ -18,6 +18,8 @@ If you want to use a domain name instead of an IP address, use `DNS:<Domain-Name
 
 # Signed with own CA certificate
 
+Credit: This guide is basically the guide from the [Harbor documentation](https://goharbor.io/docs/2.12.0/install-config/configure-https/#generate-a-certificate-authority-certificate)
+
 If you need multiple certificates and don't want to trust all of them separately, it can be easier to create a ca certificate, sign all the certificates with the ca cert and then only trust that ca cert:
 
 1. Create ca key and cert pair
