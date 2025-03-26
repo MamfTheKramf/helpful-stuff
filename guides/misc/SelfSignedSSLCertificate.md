@@ -26,8 +26,8 @@ If you need multiple certificates and don't want to trust all of them separately
 ```bash
 openssl req -x509 -newkey rsa:4096-new -nodes -sha512 -days 3650 \
   -subj "/C=<Country-Code>/ST=<State>/L=<City>/CN=MyPersonal Root CA" \
-  -keyout ca.key \
-  -out ca.crt
+  -keyout ca.key.pem \
+  -out ca.crt.pem
 ```
 
 2. Generate Certificate Signing Request (csr) (do this for each server where you need a certificate for)
@@ -37,7 +37,7 @@ openssl req -x509 -newkey rsa:4096-new -nodes -sha512 -days 3650 \
 openssl req -sha512 -new -nodes \
   -subj "/C=<Country-Code>/ST=<State>/L=<City>/CN=yourdomain.com" \
   -newkey rsa:4096 \
-  -keyout yourdomain.com.key \
+  -keyout yourdomain.com.key.pem \
   -out yourdomain.com.csr
 ```
 
@@ -63,7 +63,7 @@ DNS.2=yourdomain
 ```bash
 openssl x509 -req -sha512 -days 3650 \
     -extfile v3.ext \
-    -CA ca.crt -CAkey ca.key -CAcreateserial \
+    -CA ca.crt.pem -CAkey ca.key.pem -CAcreateserial \
     -in yourdomain.com.csr \
-    -out yourdomain.com.crt
+    -out yourdomain.com.pem
 ```
