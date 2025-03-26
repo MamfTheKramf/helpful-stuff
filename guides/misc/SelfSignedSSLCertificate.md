@@ -15,3 +15,53 @@ openssl req -newkey rsa:4096 -nodes -addext "subjectAltName = IP:<IP-Address>" -
 ```
 
 If you want to use a domain name instead of an IP address, use `DNS:<Domain-Name>` for the value of `subjectAltName`.
+
+# Signed with own CA certificate
+
+If you need multiple certificates and don't want to trust all of them separately, it can be easier to create a ca certificate, sign all the certificates with the ca cert and then only trust that ca cert:
+
+1. Create ca key and cert pair
+```bash
+openssl req -x509 -newkey rsa:4096-new -nodes -sha512 -days 3650 \
+  -subj "/C=<Country-Code>/ST=<State>/L=<City>/CN=MyPersonal Root CA" \
+  -keyout ca.key \
+  -out ca.crt
+```
+
+2. Generate Certificate Signing Request (csr) (do this for each server where you need a certificate for)
+
+   Note that CN can alo be an IP-Address
+```bash
+openssl req -sha512 -new -nodes \
+  -subj "/C=<Country-Code>/ST=<State>/L=<City>/CN=yourdomain.com" \
+  -newkey rsa:4096 \
+  -keyout yourdomain.com.key \
+  -out yourdomain.com.csr
+```
+
+3. Generate x509 v3 extension file
+
+  Paste the following into a file called `v3.ext` (or something else, but update the path in the following command then)
+
+```
+authorityKeyIdentifier=keyid,issuer
+basicConstraints=CA:FALSE
+keyUsage = digitalSignature, nonRepudiation, keyEncipherment, dataEncipherment
+extendedKeyUsage = serverAuth
+subjectAltName = @alt_names
+
+[alt_names]
+DNS.1=yourdomain.com
+DNS.2=yourdomain
+```
+  If you run the server without a domain name (i.e., just behind an IP address) use `IP=XXX.XXX.XXX.XXX` instead of the `DNS.X` lines under `[alt_names]`.
+
+4. Generate the certificate
+
+```bash
+openssl x509 -req -sha512 -days 3650 \
+    -extfile v3.ext \
+    -CA ca.crt -CAkey ca.key -CAcreateserial \
+    -in yourdomain.com.csr \
+    -out yourdomain.com.crt
+```
