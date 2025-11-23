@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "guides/misc/shell/Arithmetic in Shell.md",
+                "file": "reverse_engineering/Find Entrypoint of Binary.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Arithmetic in Shell"
+              "title": "Find Entrypoint of Binary"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "guides/misc/shell/Arithmetic in Shell.md",
+                "file": "reverse_engineering/Find Entrypoint of Binary.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Arithmetic in Shell"
+              "title": "Backlinks for Find Entrypoint of Binary"
             }
           },
           {
@@ -113,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "guides/misc/shell/Arithmetic in Shell.md",
+                "file": "reverse_engineering/Find Entrypoint of Binary.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Arithmetic in Shell"
+              "title": "Outgoing links from Find Entrypoint of Binary"
             }
           },
           {
@@ -156,13 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "guides/misc/shell/Arithmetic in Shell.md",
+                "file": "reverse_engineering/Find Entrypoint of Binary.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Arithmetic in Shell"
+              "title": "Outline of Find Entrypoint of Binary"
             }
           }
         ]
@@ -185,8 +185,10 @@
   },
   "active": "764c26edbdb94033",
   "lastOpenFiles": [
-    "README.md",
     "guides/misc/shell/Arithmetic in Shell.md",
+    "reverse_engineering/Find Entrypoint of Binary.md",
+    "reverse_engineering",
+    "README.md",
     "guides/misc/shell"
   ]
 }
