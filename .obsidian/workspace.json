@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "reverse_engineering/gdb/Set large number of bytes in memory.md",
+                "file": "reverse_engineering/gdb/Disassemble some parts with no function name.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Set large number of bytes in memory"
+              "title": "Disassemble some parts with no function name"
             }
           }
         ],
@@ -200,10 +200,10 @@
   },
   "active": "30cecc4d9d6a99a9",
   "lastOpenFiles": [
-    "reverse_engineering/gdb/Disassemble some parts with no function name.md",
+    "reverse_engineering/gdb/Evaluate expressions.md",
     "reverse_engineering/gdb/Set large number of bytes in memory.md",
     "reverse_engineering/Find Entrypoint of Binary.md",
-    "reverse_engineering/gdb/Evaluate expressions.md",
+    "reverse_engineering/gdb/Disassemble some parts with no function name.md",
     "reverse_engineering/gdb/General Improvements.md",
     "reverse_engineering/gdb/Print Values from Stack.md",
     "reverse_engineering/gdb",
